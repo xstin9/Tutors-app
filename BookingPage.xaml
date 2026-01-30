@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Thusong_Tutors.BookingPage"
+             BackgroundImageSource="backpicture.png"
+             Title="BookingPage">
+    <VerticalStackLayout>
+        <StackLayout x:Name="BookingLayout" IsVisible="False">
+
+
+            <Label 
+            Text="Book Your Appointment With Success Here!"
+            TextColor="Black"
+            VerticalOptions="Center" 
+            Style="{StaticResource Headline}"
+            SemanticProperties.HeadingLevel="Level1"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <Picker 
+                x:Name="ModulePicker"
+                Title="Select a Module"
+                TitleColor="#aa67b7"
+                TextColor="Black"
+                BackgroundColor="Transparent"
+                FontSize="16"
+                WidthRequest="300"
+                HorizontalOptions="Center"
+                Margin="20">
+            </Picker>
+       
+        <Border 
+             Stroke="Black"
+             StrokeThickness="2"
+             StrokeShape="RoundRectangle 6,6,6,6"
+             WidthRequest="300"
+             HeightRequest="40"
+             Padding="0"
+             HorizontalOptions="Center"
+             VerticalOptions="Center">
+                <DatePicker
+                   x:Name="myDatePicker"
+                   Format="dd/MM/yyyy"
+                   DateSelected="MyDatePicker_DateSelected"
+                   WidthRequest="150">
+
+                </DatePicker>
+
+            </Border>
+
+            <Picker
+                x:Name="myTimeSlotPicker"
+                Title="Select a TimeSlot"
+                TextColor="Black"
+                WidthRequest="200"
+                HorizontalOptions="Center"
+                Margin="10"
+                >
+                
+                <Picker.Items>
+                    <x:String>08:00 - 10:00</x:String>
+                    <x:String>12:00 - 14:00</x:String>
+                    <x:String>14:30 - 16:00</x:String>
+                    <x:String>16:30 - 18:00</x:String>
+                    <x:String>18:15 - 19:15</x:String>
+                </Picker.Items>
+            </Picker>
+            <Picker x:Name="TutorsList"
+          Title="Select your Tutor"
+          SelectedIndexChanged="OnTutor_SelectedIndex"
+           FontSize="16"
+            WidthRequest="300"
+            HorizontalOptions="Center"
+            Margin="20">
+            <Picker.Items>
+                <x:String>Dave Maroney</x:String>
+                <x:String>Mohammed Ali</x:String>
+                <x:String>Paul Davenport</x:String>
+                <x:String>Steve Morepe</x:String>
+                <x:String>Alex Wommar </x:String>
+            </Picker.Items>
+        </Picker>
+        <Button
+    x:Name="btnBook"
+    Text="Book"
+    Background="DarkMagenta"
+    Clicked="BookOn_Clicked"
+    TextColor="White"
+    WidthRequest="100"
+    HeightRequest="30"/>
+        </StackLayout>
+
+        <StackLayout x:Name="ConfirmLayout" IsVisible="False">
+
+            <Grid Padding="20" RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                  
+                    <RowDefinition Height="*" />
+               
+                    <RowDefinition Height="Auto" />
+                    
+                </Grid.RowDefinitions>
+
+
+                <Label
+                      x:Name="Confirm"
+                      Grid.Row="0"
+                      FontSize="30"
+                      FontAttributes="Italic,Bold"
+                      Text="You have already made a booking!"
+                      TextColor="DarkMagenta"
+                      HorizontalTextAlignment="Center"
+                      />
+
+
+                <BoxView Grid.Row="1" BackgroundColor="Transparent" />
+
+
+                <Grid Grid.Row="2" ColumnSpacing="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button
+                        x:Name="BtnbacktoLogin"
+                        Text="LogOut"
+                        TextColor="White"
+                        BackgroundColor="Black"
+                        WidthRequest="150"
+                        HeightRequest="40"
+                        HorizontalOptions="Start"
+                        Clicked="Btnbacktologin_Clicked"
+                        Grid.Column="0" />
+
+                    <Button
+                        x:Name="BtnView"
+                        Text="View Booking"
+                        TextColor="White"
+                        BackgroundColor="Black"
+                        WidthRequest="150"
+                        HeightRequest="40"
+                        HorizontalOptions="End"
+                        Clicked="BtnView_Clicked"
+                        Grid.Column="1" />
+             </Grid>
+
+                <Label
+                      x:Name="myBooking"
+                      Grid.Row="3"
+                      FontSize="18"
+                      FontAttributes="Italic,Bold"
+                      TextColor="DarkMagenta"
+                      HorizontalTextAlignment="Center"
+                      Margin="0,250,0,0"
+                      />
+
+            </Grid>
+
+
+
+
+
+        </StackLayout>
+       
+
+
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

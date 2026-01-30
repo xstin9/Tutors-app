@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImageSource="backpicture.png"
+             x:Class="Thusong_Tutors.RecoveryPage"
+             Title="RecoveryPage">
+
+    <VerticalStackLayout Padding="30" Spacing="20"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center">
+
+        <!-- Page Heading -->
+        <Label Text="Recover Password"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <!-- Email Entry -->
+        <Entry x:Name="txtEmail"
+               Placeholder="Enter your email address"
+               WidthRequest="300"
+               Keyboard="Email" />
+
+        <!-- Recover Button -->
+        <Button Text="Recover Password"
+                BackgroundColor="DarkMagenta"
+                WidthRequest="300"
+                Clicked="OnRecoverPasswordClicked" />
+
+        <!-- Reset password UI section (Initially hidden) -->
+        <StackLayout x:Name="resetLayout" IsVisible="False">
+            <Label Text="Reset Your Password" 
+                   FontAttributes="Bold" />
+            
+            <Entry x:Name="txtNewPassword" 
+                   Placeholder="New password" 
+                   IsPassword="True" />
+            
+            <Entry x:Name="txtConfirmPassword" 
+                   Placeholder="Confirm password" 
+                   IsPassword="True" />
+            
+            <Button Text="Set New Password" 
+                    Clicked="OnResetPasswordClicked"
+                    BackgroundColor="DarkMagenta"/>
+        </StackLayout>
+
+        <!-- Feedback Label -->
+        <Label x:Name="lblMessage"
+               Text=""
+               TextColor="Red"
+               HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>

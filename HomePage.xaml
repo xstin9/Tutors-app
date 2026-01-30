@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              BackgroundImageSource="backpicture.png"
+             x:Class="Thusong_Tutors.HomePage"
+             Title="HomePage">
+
+    <ScrollView>
+        <StackLayout Padding="30" Spacing="25">
+
+            
+            <Label 
+                Text="Thusong Tutoring Academy"
+                FontSize="35"
+                FontAttributes="Bold"
+                TextColor="Black"
+                
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center" />
+
+            <!-- Intro Message -->
+            <Label 
+                Text="Your journey to academic success starts here. Whether you're aiming to boost your grades, master a tricky subject, or build confidence in your studies — we're here for you every step of the way."
+                FontSize="20"
+                TextColor="DarkMagenta"
+                HorizontalTextAlignment="Center" />
+
+            <!-- Features List -->
+            <Label 
+                Text="💡Expert tutors.
+                📚Personalized learning.
+                🌟Your goals, our mission."
+                FontSize="15"
+                TextColor="MediumPurple"
+                HorizontalTextAlignment="Center" />
+
+            <!-- Specialization Note -->
+            <Label 
+                Text="🎯 Specializing in programming modules only. Let us help you master code and improve your marks."
+                FontSize="14"
+                TextColor="Indigo"
+                FontAttributes="Italic"
+                HorizontalTextAlignment="Center" />
+
+            <!-- Call-to-Action Button -->
+            <Button
+                x:Name="BtnBookApp"
+                Text="Book Your Appointment Today!!"
+                TextColor="White"
+                BackgroundColor="Black"
+                CornerRadius="12"
+                FontAttributes="Bold"
+                HeightRequest="50"
+                Clicked="BtnBookApp_Clicked"
+                HorizontalOptions="Center"
+                WidthRequest="280" />
+
+        </StackLayout>
+    </ScrollView>
+
+
+</ContentPage>

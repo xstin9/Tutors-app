@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              BackgroundImageSource="backpicture.png"
+             x:Class="Thusong_Tutors.RegistrationPage"
+             Title="RegistrationPage">
+    <VerticalStackLayout Spacing="15"
+                     Padding="20"
+                     HorizontalOptions="Center">
+
+        <Label
+         Text="Register your accountToday!"
+         TextColor="Black"
+         FontAttributes="Bold"
+         Style="{StaticResource Headline}"
+         SemanticProperties.HeadingLevel="Level1" />
+        
+        
+         
+        <Entry x:Name="txtName"
+           Background="Transparent"
+           Placeholder="Enter your Full Name"
+           WidthRequest="300"
+           HeightRequest="30" />
+
+        <Entry x:Name="txtSurname"
+          Background="Transparent"
+           Placeholder="Enter your Surname"
+           WidthRequest="300"
+           HeightRequest="30" />
+
+        <Entry x:Name="txtEmail"
+          Background="Transparent"
+           Placeholder="Enter your Email"
+           WidthRequest="300"
+           HeightRequest="30" />
+
+        <Entry x:Name="txtCreatePass"
+           Background="Transparent"
+           Placeholder="Create a new password"
+           WidthRequest="300"
+           IsPassword="True"
+           HeightRequest="30" />
+
+        <Entry x:Name="txtConfirmPass"
+           Background="Transparent"
+           IsPassword="True"
+           Placeholder="Confirm your new password"
+           WidthRequest="300"
+           HeightRequest="30" />
+
+        <Picker x:Name="UniPicker"
+                Title="Select a University"
+                SelectedIndexChanged="OnUniversity_Clicked">
+            <Picker.Items>
+                <x:String>North West University</x:String>
+                <x:String>University of Cape Town</x:String>
+                <x:String>University of Johannesburg</x:String>
+                <x:String>University of Pretoria</x:String>
+                <x:String>University of Witwatersrand</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button
+            x:Name="btnRegister"
+            Text="Register Account"
+            Background="DarkMagenta"
+            Clicked="RegisterOn_Clicked"
+            TextColor="White"
+            WidthRequest="160"
+            HeightRequest="30"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>

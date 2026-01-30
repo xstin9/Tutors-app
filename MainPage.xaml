@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Thusong_Tutors.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="programmingsplash.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+
+            <Label
+                Text="Thusong Tutoring Services"
+                TextColor="Black"
+                FontAttributes="Bold"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                 Text="We're here to revive your grades!"
+                 TextColor="Black"
+                 Style="{StaticResource SubHeadline}"
+                 SemanticProperties.HeadingLevel="Level2"
+                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+                <Label
+                Text="Login Details:"
+                TextColor="Black"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+            <Border 
+                Stroke="Black"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 6,6,6,6"
+                WidthRequest="300"
+                HeightRequest="40"
+                Padding="0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <Entry
+                x:Name="txtUserName"
+                Placeholder="Enter User Email"
+                PlaceholderColor="Grey"/>
+             </Border>
+
+                <Border 
+                Stroke="Black"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 6,6,6,6"
+                WidthRequest="300"
+                HeightRequest="40"
+                Padding="0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <Entry
+                x:Name="txtPassword"
+                Placeholder="Enter Password"
+                IsPassword="True"
+                PlaceholderColor="Gray"/>
+                </Border>
+            <Button
+                 x:Name="BtnLogin"
+                 Text="Login" 
+                 BackgroundColor="DarkMagenta"
+                 SemanticProperties.Hint="Counts the number of times you click"
+                 Clicked="BtnLogin_Clicked"
+                 HorizontalOptions="Fill" 
+                 WidthRequest="100"
+                 HeightRequest="30" />
+
+
+            <HorizontalStackLayout Spacing="10"
+                       HorizontalOptions="Center"
+                       Margin="20">
+            
+            <Button
+                 x:Name="BtnForgot"
+                 Text="Forgot Password" 
+                 SemanticProperties.Hint="Counts the number of times you click"
+                 Clicked="BtnForgot_Clicked"
+                 TextColor="DarkMagenta"
+                 BackgroundColor="Transparent"
+                 FontAttributes="Italic"
+                 HorizontalOptions="Fill"
+                 WidthRequest="150"
+                 HeightRequest="30"
+                 />
+           
+            <Button
+                 x:Name="BtnSignUp"
+                 Text="SignUp" 
+                 SemanticProperties.Hint="Counts the number of times you click"
+                 Clicked="BtnSignUp_Clicked"
+                 TextColor="DarkMagenta"
+                 BackgroundColor="Transparent"
+                 FontAttributes="Italic"
+                 HorizontalOptions="Fill"
+                 WidthRequest="100"
+                 HeightRequest="30"
+                 />
+                </HorizontalStackLayout>
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
